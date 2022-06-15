@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native'
 
 export default StyleSheet.create({
+
     container: {
         flex: 1,
         backgroundColor: '#fff',
@@ -10,8 +11,6 @@ export default StyleSheet.create({
       title: {
         fontSize: 64,
         textAlign: 'center',
-      //   fontFamily: 'sans-serif' figure out fonts!!!
-      
       },
       image: {
           width: 71,
