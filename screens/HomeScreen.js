@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { StyleSheet, Image, Button, Text, View, Linking } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from 'expo-status-bar';
+import styles from './style'
 
 const OpenURLButton = ({ url, children }) => { //https://reactnative.dev/docs/linking
     const handlePress = useCallback(async () => {
@@ -30,16 +30,5 @@ const Home = () => {
       </View>
     );
 }
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    title: {
-      fontSize: 64,
-      textAlign: 'center',
-    }
-  });
+
 export default Home;

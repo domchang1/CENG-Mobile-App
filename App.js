@@ -8,7 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 import HomeScreen from "./screens/HomeScreen";
 import CodingAcademyScreen from "./screens/CodingAcademyScreen";
 import AboutUsScreen from "./screens/AboutUsScreen";
-
+import styles from './style'
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -38,15 +38,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 64,
-    textAlign: 'center',
-  }
-});
+
