@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Image source={require('../images/ceng.png')}/>
-      <Text style={{fontFamily:'Raleway_500Medium', fontSize: 60, textAlign: 'center', margin: 15}}>
+      <Text style={{fontFamily:'Raleway_400Regular', fontSize: 60, textAlign: 'center', margin: 15}}>
         COMPUTER ENGINEERS OF THE NEXT GENERATION</Text>
       <StatusBar style="auto" />
       <OpenURLButton url={'https://www.cengclass.org/'}>Our Website</OpenURLButton>
