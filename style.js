@@ -21,5 +21,8 @@ export default StyleSheet.create({
           width: 71,
           height: 50,
           marginTop: 25,
+      },
+      button: {
+        marginTop: 25
       }
 });
