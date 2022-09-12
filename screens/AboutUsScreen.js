@@ -4,10 +4,14 @@ import { useFonts, Raleway_400Regular, Raleway_700Bold} from '@expo-google-fonts
 //Run "npx react-native link" whenever adding new fonts
 
 const AboutUs = () => {
-  let [fontsLoaded, error] = useFonts({
+  let [fontsLoaded] = useFonts({
     Raleway_400Regular,
     Raleway_700Bold
   });
+
+  if (!fontsLoaded) {
+    return null;
+  }
     return (
         <View style={styles.container}>
           <Text style={{ fontFamily:'Raleway_400Regular', fontSize: 20, textAlign: 'center', margin: 5}}>

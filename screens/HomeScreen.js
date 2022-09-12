@@ -4,10 +4,15 @@ import styles from '../style'
 import { useFonts, Raleway_400Regular, Raleway_500Medium} from '@expo-google-fonts/raleway';
 
 const Home = () => {
-  let [fontsLoaded, error] = useFonts({
+  let [fontsLoaded] = useFonts({
     Raleway_400Regular,
     Raleway_500Medium,
   });
+  
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <Image source={require('../images/ceng.png')}/>

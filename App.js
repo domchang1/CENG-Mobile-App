@@ -12,6 +12,7 @@ import AboutUsScreen from "./screens/AboutUsScreen";
 
 const Tab = createBottomTabNavigator();
 
+
 export default function App() {
   
     return (

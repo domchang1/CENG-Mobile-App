@@ -1,27 +1,61 @@
-import { StyleSheet, Button, Text, View, Image, TouchableOpacity, Linking } from 'react-native';
+import { Text, View, Pressable, Linking, ScrollView, StyleSheet} from 'react-native';
 import styles from '../style'
 import { useFonts, Raleway_400Regular, Raleway_700Bold} from '@expo-google-fonts/raleway';
 
 const CodingAcademy = () => {
-    let [fontsLoaded, error] = useFonts({
+    let [fontsLoaded] = useFonts({
         Raleway_400Regular,
         Raleway_700Bold
       });
+
+    if (!fontsLoaded) {
+        return null;
+    }
+
     return (
-        <View style={styles.container}>
-            <Text style={{ fontFamily:'Raleway_700Bold', fontSize: 30, textAlign: 'center', margin: 5}}>CENG Online Coding Academy</Text>
-            <Button style={styles.button} title="Beginner Scratch Lessons" onPress={() => Linking.openURL('https://www.cengclass.org/blank-page/')}/>
-            <Button style={styles.button} title="Intermediate Scratch Lessons" onPress={() => Linking.openURL('https://www.cengclass.org/intermediate-scratch-lessons/')}/>
-            <Button style={styles.button} title="Advanced Scratch Lessons" onPress={() => Linking.openURL('https://www.cengclass.org/advanced-scratch/')}/>
-            <Button style={styles.button} title="Beginner Javascript Lessons" onPress={() => Linking.openURL('https://www.cengclass.org/beginner-java-script/')}/>
-            <Button style={styles.button} title="Intermediate Javascript Lessons" onPress={() => Linking.openURL('https://www.cengclass.org/intermediate-java-script/')}/>
-            <Button style={styles.button} title="Beginner Python Lessons" onPress={() => Linking.openURL('https://www.cengclass.org/beginner-python/')}/>
-            <Button style={styles.button} title="Intermediate Python Lessons" onPress={() => Linking.openURL('https://www.cengclass.org/intermediate-python/')}/>
-            <Button style={styles.button} title="Advanced Python Lessons" onPress={() => Linking.openURL('https://www.cengclass.org/advanced-python/')}/>
-            <Button style={styles.button} title="Academia De Codificación En Línea - Español" onPress={() => Linking.openURL('https://www.cengclass.org/academia-de-codificacion-en-linea-espanol/')}/>
-            
-        </View>
-        
+        <ScrollView>
+            <View style={styles.container}>
+                <View style={styles.blueback}>
+                    <Text style={{ fontFamily:'Raleway_700Bold', fontSize: 30, color: 'white', textAlign: 'center', margin: 5}}>Online Coding Academy</Text>
+                </View>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/beginning-scratch/')}>
+                    <Text style={styles.text}>Beginner Scratch Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/intermediate-scratch/')}>
+                    <Text style={styles.text}>Intermediate Scratch Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/advanced-scratch/')}>
+                    <Text style={styles.text}>Advanced Scratch Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/beginner-javascript/')}>
+                    <Text style={styles.text}>Beginner Javascript Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/intermediate-javascript/')}>
+                    <Text style={styles.text}>Intermediate Javascript Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/advanced-javascript/')}>
+                    <Text style={styles.text}>Advanced Javascript Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/advanced-javascript/')}>
+                    <Text style={styles.text}>Advanced Javascript Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/beginner-python/')}>
+                    <Text style={styles.text}>Beginner Python Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/intermediate-python/')}>
+                    <Text style={styles.text}>Intermediate Python Lessons</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/advanced-python/')}>
+                    <Text style={styles.text}>Advanced Python Lessons</Text>
+                </Pressable>
+            </View>
+            <View style={{marginTop: 25, backgroundColor:'#fff',borderBottomColor: 'black', borderBottomWidth: 1,}}/>
+            <View style={styles.container2}>
+                <Pressable style={styles.button} onPress={() => Linking.openURL('https://www.cengclass.org/academia-de-codificacion-en-linea-espanol/')}>
+                    <Text style={{color: 'rgba(105,160,215)', textDecorationLine: 'underline'}}>Academia De Codificación En Línea - Español</Text>
+                </Pressable>
+            </View>
+        </ScrollView>
     )
 }
 
